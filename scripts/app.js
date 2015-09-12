@@ -38,6 +38,11 @@ var app = angular.module('khmerTubeApp', [
     controller: 'AboutCtrl',
     controllerAs: 'about'
   })
+  .when('/view/:videoId',{
+    templateUrl: 'views/browse.html',
+    controller: 'BrowseCtrl',
+    controllerAs: 'browse'
+  })
   .otherwise({
     redirectTo: '/'
   });

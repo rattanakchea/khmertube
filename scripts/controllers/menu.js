@@ -14,13 +14,16 @@ app.controller('MenuCtrl', function ($scope, YoutubeService) {
 			$scope.videos.length = 0;			
 		};
 		YoutubeService.queryByChannel(playlistId).then(function(data){
-			//console.log(data);
+			console.log('query by channel..:');
+			console.log(data.data.items);
 			$.each(data.data.items, function(index, item){
 				//$scope.videos.push
 				var object = {
+					'videoId': item.id,
 					'img': item.snippet.thumbnails.high.url,
 					'title': item.snippet.title
 				};
+
 				$scope.videos.push(object);
 			});
 		});

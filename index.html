@@ -12,7 +12,7 @@
  	<div>
  		<header id="main_header" class="cf">
  			<div class="wrapper_wide">
- 				<a id="logo" href="#/">KhmerTube</a>
+ 				<a id="logo" href="/#/">KhmerTube</a>
  				<nav>
  					<ul>
  						<li><a href="#/">Explore</a></li>
@@ -26,8 +26,7 @@
  				<ul>
  					<li ng-repeat="channel in channels"
  					><a ng-href="#/" ng-click="queryChannel(channel.playlist.uploadedVideo)">{{channel.name}}</a>
- 					</li>
- 					
+ 					</li> 					
  				</ul>
  			</nav>	
  		</div>
@@ -62,5 +61,6 @@
  	<script src="scripts/controllers/main.js"></script>
  	<script src="scripts/controllers/about.js"></script>
  	<script src="scripts/controllers/menu.js"></script>
+ 	<script src="scripts/controllers/browse.js"></script>
  </body>
  </html>

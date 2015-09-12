@@ -2,25 +2,20 @@
 
 var app = app || {};
 
-app.controller('MainCtrl', function ($scope, YoutubeService) {
+app.controller('MainCtrl', function ($scope, YoutubeService, $location) {
 	$scope.videos = YoutubeService.init;
 
-
-	// $scope.videos = [
-	// {'img': "http://placehold.it/300x300"},
-	// {'img' : "http://placehold.it/300x300"} ];
-
-	// $scope.$watch('videos', function() {
- //       alert('videos content changes');
- //   });
-
 	$scope.queryVideo = function(){
+		if ($scope.videos.length > 0) {
+			$scope.videos.length = 0;			
+		};
 		YoutubeService.queryVideo().then(function(data){
-			//console.log(data.data.items);
+			//console.log('data: ' + data.data.items);
 			$.each(data.data.items, function(index, item){
 				//$scope.videos.push
 
 				var object = {
+					'videoId': item.id.videoId,
 					'img': item.snippet.thumbnails.high.url,
 					'title': item.snippet.title
 				};
@@ -30,6 +25,10 @@ app.controller('MainCtrl', function ($scope, YoutubeService) {
 		})
 	};
 	$scope.queryVideo();
+
+	$scope.setSelectedVideo = function(video){
+		YoutubeService.selectedVideo = video;
+	}
 
 });
 
@@ -74,11 +73,12 @@ app.factory('YoutubeService', function($http){
 					key: apiKey,
 					maxResults: 5
 			},
-			cache: false				
+			cache: true				
 		});
 		},
 
-		init: []
+		init: [],
+		selectedVideo: {}
 	}
 
 	return YoutubeService;

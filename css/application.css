@@ -498,6 +498,11 @@ header#main_header nav ul li a {
   color: #d2674e;
 }
 
+#videoWrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
