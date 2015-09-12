@@ -1,0 +1,18 @@
+<!-- list of video -->
+<div id="videos" class="cf wrapper_wide">
+
+	<div class="wrapper">
+		<ul>
+			<a href="" ng-repeat="video in videos">
+				<li>
+					<img ng-src="{{video.img}}">
+					<div class="podcast_overview">
+						<h2>{{video.title | limitTo:20}}</h2>
+						<p class="episode_count">1 Episode</p>	
+					</div>
+
+				</li>
+			</a>
+		</ul>
+	</div>
+</div>

@@ -1,0 +1,35 @@
+{
+  "name": "khmerTubeApp",
+  "version": "0.1",
+  "authors": [
+    "Rattanak Chea <rattanak.chea@gmail.com>"
+  ],
+  "install": {
+    "path": {
+      "js": "scripts/_js",
+      "css": "_css/"
+    }
+  },
+  "description": "khmer tube - video collection",
+  "keywords": [
+    "khmer",
+    "video",
+    "tube",
+    "music",
+    "cambodian",
+    "idol"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "latest",
+    "angular": "~1.4.5",
+    "angular-route" : "latest"
+  }
+}
