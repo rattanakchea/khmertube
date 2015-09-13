@@ -5,6 +5,7 @@ var app = app || {};
 app.controller('BrowseCtrl', function ($scope, $routeParams, $location, YoutubeService) {
 	$scope.videos = YoutubeService.init;	
 
+
 	if(jQuery.isEmptyObject(YoutubeService.selectedVideo)){
 		console.log('empty');
 		//query api with videoid params: $routeParams.videoId
@@ -20,6 +21,10 @@ app.controller('BrowseCtrl', function ($scope, $routeParams, $location, YoutubeS
 		$scope.selectedVideo = YoutubeService.selectedVideo;	
 	}
 	
+
+	$scope.back = function(){
+		window.history.back();
+	};
 
 
 });

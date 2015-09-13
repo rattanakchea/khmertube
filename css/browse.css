@@ -2,3 +2,12 @@
   width: 90%;
   margin: 2rem auto;
 }
+
+#videoWrapper img {
+  display: block;
+  margin: 0 auto;
+}
+
+#videoWrapper h2 {
+  text-align: center;
+}

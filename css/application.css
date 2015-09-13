@@ -503,6 +503,21 @@ header#main_header nav ul li a {
   margin: 2rem auto;
 }
 
+#videoWrapper img {
+  display: block;
+  margin: 0 auto;
+}
+
+#videoWrapper h2 {
+  text-align: center;
+}
+
+#videoWrapper div.button {
+  margin: 1rem;
+  background: #d2674e;
+  cursor: pointer;
+}
+
 body {
   font-family: 'Open Sans', sans-serif;
 }
@@ -581,7 +596,6 @@ body {
   outline: none;
   border: none;
   display: inline-block;
-  min-width: 8.5rem;
   margin: 1.5rem 2.5% 0 2.5%;
 }
 
