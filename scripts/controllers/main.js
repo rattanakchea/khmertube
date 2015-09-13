@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-app.controller('MainCtrl', function ($scope, YoutubeService, $location) {
+app.controller('MainCtrl', function ($scope, YoutubeService, $location, $sce) {
 	$scope.videos = YoutubeService.init;
 
 	$scope.queryVideo = function(){
@@ -29,6 +29,8 @@ app.controller('MainCtrl', function ($scope, YoutubeService, $location) {
 	$scope.setSelectedVideo = function(video){
 		YoutubeService.selectedVideo = video;
 	};
+
+
 
 
 	// $scope.getMovieById = function(videoId){

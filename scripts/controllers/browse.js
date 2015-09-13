@@ -18,7 +18,8 @@ app.controller('BrowseCtrl', function ($scope, $routeParams, $location, YoutubeS
 		//if cannot find, redirect somewhere
 		//$location.path('#/view/'+ $routeParams.videoId);
 	} else {
-		$scope.selectedVideo = YoutubeService.selectedVideo;	
+		$scope.selectedVideo = YoutubeService.selectedVideo;
+		$scope.url = 'http://www.youtube.com/embed/' + YoutubeService.selectedVideo.videoId;	
 	}
 	
 

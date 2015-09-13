@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-app.controller('MenuCtrl', function ($scope, $routeParams, YoutubeService) {
+app.controller('MenuCtrl', function ($scope, $routeParams, YoutubeService, $sce) {
 	$scope.videos = YoutubeService.init;
 	$scope.channels = global.channels;
 
@@ -17,7 +17,7 @@ app.controller('MenuCtrl', function ($scope, $routeParams, YoutubeService) {
 			$.each(data.data.items, function(index, item){
 				//$scope.videos.push
 				var object = {
-					'videoId': item.id,
+					'videoId': item.snippet.resourceId.videoId,
 					'img': item.snippet.thumbnails.high.url,
 					'title': item.snippet.title
 				};
@@ -35,5 +35,6 @@ app.controller('MenuCtrl', function ($scope, $routeParams, YoutubeService) {
 	$scope.setSelectedVideo = function(video){
 		YoutubeService.selectedVideo = video;
 	};
+
 
 });

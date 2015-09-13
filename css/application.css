@@ -503,13 +503,14 @@ header#main_header nav ul li a {
   margin: 2rem auto;
 }
 
-#videoWrapper img {
+#videoWrapper #video {
   display: block;
   margin: 0 auto;
 }
 
 #videoWrapper h2 {
-  text-align: center;
+  font-size: 2rem;
+  text-align: left;
 }
 
 #videoWrapper div.button {

@@ -1,7 +1,14 @@
 <div class="wrapper_skinny">
 	<div id="videoWrapper">
 		<div class="button" ng-click="back()">Back</div>
-		<img ng-src="{{selectedVideo.img}}">	
+
+		<div id="video">
+			<iframe id="ytplayer" type="text/html" width="640" height="390"
+			ng-src="{{url}}"
+			frameborder="0"/>	
+		</div>
+		
+		<!-- <img ng-src="{{selectedVideo.img}}">	 -->
 		<h2>{{selectedVideo.title}}</h2>
 	</div>
 	<!-- pagination -->

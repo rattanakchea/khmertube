@@ -52,3 +52,12 @@ var app = angular.module('khmerTubeApp', [
     redirectTo: '/'
   });
 });
+
+//youtube safe url
+app.config(function($sceDelegateProvider) {
+ $sceDelegateProvider.resourceUrlWhitelist([
+   // Allow same origin resource loads.
+   'self',
+   // Allow loading from our assets domain.  Notice the difference between * and **.
+   'http://www.youtube.com/embed/**']);
+ });
