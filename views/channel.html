@@ -4,7 +4,8 @@
 
 	<div class="wrapper">
 		<ul>
-			<a ng-href="#/browse/{{video.videoId}}" ng-click="setSelectedVideo(video)" ng-repeat="video in videos">
+		<!-- ng-click="setSelectedVideo(video)" -->
+			<a ng-href="#/view/{{video.videoId}}" ng-repeat="video in videos">
 				<li>
 					<img ng-src="{{video.img}}">
 					<div class="podcast_overview">

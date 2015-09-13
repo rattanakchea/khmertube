@@ -38,7 +38,12 @@ var app = angular.module('khmerTubeApp', [
     controller: 'AboutCtrl',
     controllerAs: 'about'
   })
-  .when('/view/:videoId',{
+  .when('/channel/:channelId',{
+    templateUrl: 'views/main.html',
+    controller: 'MenuCtrl',
+    controllerAs: 'menu'
+  })
+  .when('/browse/:videoId',{
     templateUrl: 'views/browse.html',
     controller: 'BrowseCtrl',
     controllerAs: 'browse'

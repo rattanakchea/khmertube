@@ -3,7 +3,7 @@
 var app = app || {};
 
 app.controller('BrowseCtrl', function ($scope, $routeParams, $location, YoutubeService) {
-	$scope.videos = YoutubeService.init;
+	$scope.videos = YoutubeService.init;	
 
 	if(jQuery.isEmptyObject(YoutubeService.selectedVideo)){
 		console.log('empty');

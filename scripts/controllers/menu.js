@@ -2,11 +2,9 @@
 
 var app = app || {};
 
-app.controller('MenuCtrl', function ($scope, YoutubeService) {
+app.controller('MenuCtrl', function ($scope, $routeParams, YoutubeService) {
 	$scope.videos = YoutubeService.init;
-
 	$scope.channels = global.channels;
-	console.log($scope.channels);
 
 	$scope.queryChannel = function(playlistId){
 		//clear exisitng video
@@ -28,9 +26,14 @@ app.controller('MenuCtrl', function ($scope, YoutubeService) {
 			});
 		});
 	};
-
-	$scope.test = function(data){
-		console.log(data);
+	if($routeParams.channelId) {
+		console.log($routeParams.channelId);
+		$scope.queryChannel($routeParams.channelId);	
 	}
+	
+	//YoutubeService create a reference to selected video
+	$scope.setSelectedVideo = function(video){
+		YoutubeService.selectedVideo = video;
+	};
 
 });
