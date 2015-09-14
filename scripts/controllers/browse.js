@@ -2,7 +2,7 @@
 
 var app = app || {};
 
-app.controller('BrowseCtrl', function ($scope, $routeParams, $location, YoutubeService) {
+app.controller('BrowseCtrl', function ($scope, $routeParams, $location, YoutubeService, $sce) {
 	$scope.videos = YoutubeService.init;	
 
 
@@ -19,7 +19,8 @@ app.controller('BrowseCtrl', function ($scope, $routeParams, $location, YoutubeS
 		//$location.path('#/view/'+ $routeParams.videoId);
 	} else {
 		$scope.selectedVideo = YoutubeService.selectedVideo;
-		$scope.url = 'http://www.youtube.com/embed/' + YoutubeService.selectedVideo.videoId;	
+		$scope.url = $sce.trustAsResourceUrl('http://www.youtube.com/embed/'+
+			YoutubeService.selectedVideo.videoId);
 	}
 	
 

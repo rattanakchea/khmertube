@@ -479,7 +479,6 @@ header#main_header nav ul li a {
 #videos ul li .podcast_overview h2 {
   margin: 0;
   font-size: 1rem;
-  font-weight: 700;
   color: #22292e;
   line-height: 1rem;
 }
@@ -521,6 +520,12 @@ header#main_header nav ul li a {
 
 body {
   font-family: 'Open Sans', sans-serif;
+}
+
+#content {
+  background: linear-gradient(to bottom, #ECEEF2, rgba(246, 126, 12, 0.6));
+  min-height: 400px;
+  padding: 2rem;
 }
 
 .wrapper_wide {
@@ -673,7 +678,7 @@ body {
 #menu ul {
   list-style-type: none;
   padding-left: 0;
-  margin: 1rem 0 0 0;
+  margin: 0;
 }
 
 #menu ul li {
