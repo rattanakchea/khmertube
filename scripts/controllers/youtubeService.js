@@ -1,50 +1,48 @@
 'use strict';
+app.constant('API_BASEURL', 'https://www.googleapis.com/youtube/v3/')
+.constant('API_KEY', 'AIzaSyBbrsJJld4NamdmdaHIgVp1zDXY7HT_7lM');
+
+
 //Youtube Service
-app.factory('YoutubeService', function($http){
-	var apiKey = 'AIzaSyBbrsJJld4NamdmdaHIgVp1zDXY7HT_7lM';
-	var api = 'https://www.googleapis.com/youtube/v3/';
+app.factory('YoutubeService', function($http, API_BASEURL, API_KEY){
 	var search = 'search';
 	var channels = 'channels';
 	var activities = 'activities';
 	var channelSections = 'channelSections';
 	var playlistItems = 'playlistItems';
 
-	var config = {
-		params: {
-			part: 'snippet',
-			q: 'khmer new song',
-			key: apiKey,
-			maxResults: 10	
-		},
-		paramSerializer: '$httpParamSerializerJQLike',
-		cache: true
-	};
-
 	var YoutubeService = {
 		queryVideo: function(){
-			return $http.get(api+search, config);
+			var config = {
+					part: 'snippet',
+					q: 'khmer new song',
+					key: API_KEY,
+					maxResults: 10
+			};
+
+			return $http.get(API_BASEURL+search,
+				{
+					params: config,
+					paramSerializer: '$httpParamSerializerJQLike',
+					cache: true
+				});
 		},
 
+		//by channel id
 		queryByChannel: function(playlistId){
-			
-			//var uploadId = global.channels[0].playlist.greenMile;
-			//console.log('playlistid: ' + playlistId);
-			//console.log('fixed id: '  + uploadId);
-
-			var url = api+ playlistItems;
-			console.log(url);
-			return $http.get(url, {
-				params: {
+			var config = {
 					part: 'snippet',
 					playlistId: playlistId,
-					key: apiKey,
+					key: API_KEY,
 					maxResults: 5
-				},
+			};
+			return $http.get(API_BASEURL+playlistItems,{
+				params: config,
 				cache: true				
 			});
 		},
 
-		init: [],
+		init: [],  //for array reference
 		selectedVideo: {},
 	}
 
