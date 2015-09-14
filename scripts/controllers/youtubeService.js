@@ -17,7 +17,7 @@ app.factory('YoutubeService', function($http, API_BASEURL, API_KEY){
 					part: 'snippet',
 					q: 'khmer new song',
 					key: API_KEY,
-					maxResults: 10
+					maxResults: 12
 			};
 
 			return $http.get(API_BASEURL+search,
@@ -34,7 +34,7 @@ app.factory('YoutubeService', function($http, API_BASEURL, API_KEY){
 					part: 'snippet',
 					playlistId: playlistId,
 					key: API_KEY,
-					maxResults: 5
+					maxResults: 12
 			};
 			return $http.get(API_BASEURL+playlistItems,{
 				params: config,

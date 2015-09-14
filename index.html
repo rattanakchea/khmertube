@@ -3,7 +3,7 @@
  <head>
  	<meta charset="UTF-8">
  	<title>Khmer Video</title>
- 	<meta name="viewport" content="width=device-width">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
  	<link rel="stylesheet" type="text/css" href="css/application.css">
  	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
  </head>
@@ -12,28 +12,19 @@
  		<div class="wrapper_wide">
  			<a id="logo" href="/#/">KhmerTube</a>
  			<nav>
- 				<ul>
+ 				<ul id="top">
  					<li><a href="#/">Explore</a></li>
  					<li><a href="#about">About</a></li>
  				</ul>
  			</nav> 
  		</div>			
  	</header>
- 	<div id="menu" ng-controller="MenuCtrl">
- 		<nav class="wrapper_wide">
- 			<ul>
- 				<li ng-repeat="channel in channels"
- 				><a ng-href="#/channel/{{channel.playlist.uploadedVideo}}">{{channel.name}}</a>
- 			</li> 					
- 		</ul>
- 	</nav>	
- </div>
+ 	<div ng-include="'views/partials/navigation.html'"></div>
  <div id="content">
  	<div ng-view=""></div>	
  </div>
 
  <script src="scripts/libs/jquery/jquery.js"></script>
-
  <!-- <script async=false src="scripts/_js/youtube/client.js?onload=handleClientLoad"></script> -->
  <!-- <script src="scripts/_js/youtube/auth.js"></script> -->
 

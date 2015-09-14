@@ -1,0 +1,9 @@
+<div id="navigation" ng-controller="MenuCtrl">
+	<nav class="wrapper_wide">
+		<ul>
+			<li ng-repeat="channel in channels"
+			><a ng-href="#/channel/{{channel.playlist.uploadedVideo}}">{{channel.name}}</a>
+		</li> 					
+	</ul>
+</nav>	
+</div>
