@@ -405,8 +405,12 @@ header#main_header #logo {
   float: left;
   font-weight: 700;
   text-transform: uppercase;
-  color: #22292e;
+  color: #d2674e;
   text-decoration: none;
+  font-size: 2.3rem;
+  letter-spacing: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #22292e;
 }
 
 header#main_header nav {

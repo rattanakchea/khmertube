@@ -2,14 +2,14 @@
 	<nav class="wrapper_wide">
 		<label for="show-menu" class="show-menu">Show Menu</label>
 		<input type="checkbox" id="show-menu" role="button">
-		<ul id="menu">
-			<li ng-repeat="channel in channels">
-				<a href="#/channel/{{channel.recentUpload}}">{{channel.name}} ￬</a>
+		<ul id="menu" ng-mouseover="showSubMenu()" ng-mouseleave="hideSubMenu()">
+			<li ng-click="hideSubMenu()" ng-repeat="channel in channels">
+				<a ng-href="#/channel/{{channel.recentUpload}}">{{channel.name}} ￬</a>
 				<ul class="hidden">
-					<li ng-repeat="playlist in channel.playlists"><a href="#/channel/{{playlist.playlistId}}">{{playlist.name}}</a></li>
+					<li ng-repeat="playlist in channel.playlists"><a ng-href="#/channel/{{playlist.playlistId}}">{{playlist.name}}</a></li>
 				</ul>
 			</li>
-			<li><a href="#about">About</a></li>
+			<li><a ng-href="#about">About</a></li>
 		</ul>
 	</nav>	
 </div>
