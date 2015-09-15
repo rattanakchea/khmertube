@@ -411,21 +411,36 @@ header#main_header #logo {
 
 header#main_header nav {
   float: right;
+  text-align: center;
 }
 
-header#main_header nav ul {
-  list-style: none;
+header#main_header nav input {
+  color: #22292e;
+  border-radius: 1rem;
+  padding: 0.1rem 0.3rem;
+}
+
+header#main_header nav a.btn {
+  color: #FFF;
+  text-decoration: none;
+  font-size: 1rem;
+  padding: .5rem;
+  border-radius: 1rem;
+  outline: none;
+  border: none;
+  display: inline-block;
+  min-width: 5rem;
   margin: 0;
 }
 
-header#main_header nav ul li {
-  display: inline;
-  margin-left: 2.5rem;
+header#main_header nav a.btn_highlight {
+  background: #d2674e;
+  -webkit-transition: background 0.4s ease-in-out;
+  transition: background 0.4s ease-in-out;
 }
 
-header#main_header nav ul li a {
-  color: #22292e;
-  text-decoration: none;
+header#main_header nav a.btn_highlight:hover {
+  background: #c74f33;
 }
 
 #banner {
@@ -750,37 +765,6 @@ body {
   background-size: cover;
   background-position: center;
   text-align: center;
-}
-
-#background header {
-  padding: 3rem 0;
-}
-
-#background header #logo {
-  float: left;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #FFF;
-  text-decoration: none;
-}
-
-#background header nav#top {
-  float: right;
-}
-
-#background header nav#top ul#top {
-  list-style: none;
-  margin: 0;
-}
-
-#background header nav#top ul#top li {
-  display: inline;
-  margin-left: 2.5rem;
-}
-
-#background header nav#top ul#top li a {
-  color: #FFF;
-  text-decoration: none;
 }
 
 #background h1 {

@@ -1,8 +1,6 @@
 'use strict';
 
 var global = {
-  title: 'Khmer Tube',
-
   channels: [
     {'name': 'Cambodian Idol',
       'id': 'UC8b-bkP65mcy4wMFEw3eirw',
@@ -41,7 +39,7 @@ var global = {
       'id': 'UCosuzQQUHjoPXUePHOiQSdg',
       'recentUpload' : 'PLUway4xenNk7siZIsAFDdC0JOkvwok7Wn', 
       'playlists': [
-        { 'name' : 'Live Show Week 1',
+        { 'name' : 'Live Show',
           'playlistId': 'PLUway4xenNk7siZIsAFDdC0JOkvwok7Wn'
         },
         { 'name' : 'Battle Round',

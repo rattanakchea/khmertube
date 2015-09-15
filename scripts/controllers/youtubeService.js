@@ -12,10 +12,12 @@ app.factory('YoutubeService', function($http, API_BASEURL, API_KEY){
 	var playlistItems = 'playlistItems';
 
 	var YoutubeService = {
-		queryVideo: function(){
+
+		queryVideo: function(query){
+			query = query || 'khmer songs';
 			var config = {
 					part: 'snippet',
-					q: 'khmer new song',
+					q: query,
 					key: API_KEY,
 					maxResults: 12
 			};

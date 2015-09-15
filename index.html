@@ -11,33 +11,33 @@
  	<header id="main_header" class="cf">
  		<div class="wrapper_wide">
  			<a id="logo" href="/#/">KhmerTube</a>
- 			<nav>
- 				<ul id="top">
- 					<li><a href="#/">Explore</a></li>
- 					<li><a href="#about">About</a></li>
- 				</ul>
+ 			<nav id="top" ng-controller="MainCtrl">
+ 				<form ng-submit="queryVideo(query)">
+ 					<input ng-model="query" type="text" placeholder="search videos">
+ 					<a ng-click="queryVideo(query)" class="btn btn_highlight">Search</a>
+ 				</form>
  			</nav> 
  		</div>			
  	</header>
  	<div ng-include="'views/partials/navigation.html'"></div>
- <div id="content">
- 	<div ng-view=""></div>	
- </div>
+ 	<div id="content">
+ 		<div ng-view=""></div>	
+ 	</div>
 
- <script src="scripts/libs/jquery/jquery.js"></script>
- <!-- <script async=false src="scripts/_js/youtube/client.js?onload=handleClientLoad"></script> -->
- <!-- <script src="scripts/_js/youtube/auth.js"></script> -->
+ 	<script src="scripts/libs/jquery/jquery.js"></script>
+ 	<!-- <script async=false src="scripts/_js/youtube/client.js?onload=handleClientLoad"></script> -->
+ 	<!-- <script src="scripts/_js/youtube/auth.js"></script> -->
 
 
- <!-- <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script> -->
- <script src="scripts/libs/angular/angular.js"></script>
- <script src="scripts/libs/angular-route/angular-route.js"></script>
+ 	<!-- <script src="https://apis.google.com/js/client.js?onload=handleClientLoad"></script> -->
+ 	<script src="scripts/libs/angular/angular.js"></script>
+ 	<script src="scripts/libs/angular-route/angular-route.js"></script>
 
- <script src="scripts/app.js"></script>
- <script src="scripts/controllers/main.js"></script>
- <script src="scripts/controllers/youtubeService.js"></script>
- <script src="scripts/controllers/about.js"></script>
- <script src="scripts/controllers/menu.js"></script>
- <script src="scripts/controllers/browse.js"></script>
-</body>
-</html>
+ 	<script src="scripts/app.js"></script>
+ 	<script src="scripts/controllers/main.js"></script>
+ 	<script src="scripts/controllers/youtubeService.js"></script>
+ 	<script src="scripts/controllers/about.js"></script>
+ 	<script src="scripts/controllers/menu.js"></script>
+ 	<script src="scripts/controllers/browse.js"></script>
+ </body>
+ </html>

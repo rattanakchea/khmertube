@@ -5,15 +5,14 @@ var app = app || {};
 app.controller('MainCtrl', function ($scope, YoutubeService, $location, $sce) {
 	$scope.videos = YoutubeService.init;
 
-	$scope.queryVideo = function(){
+	$scope.queryVideo = function(query){
 		if ($scope.videos.length > 0) {
 			$scope.videos.length = 0;			
 		};
-		YoutubeService.queryVideo().then(function(data){
+		YoutubeService.queryVideo(query).then(function(data){
 			//console.log('data: ' + data.data.items);
 			$.each(data.data.items, function(index, item){
 				//$scope.videos.push
-
 				var object = {
 					'videoId': item.id.videoId,
 					'img': item.snippet.thumbnails.high.url,
