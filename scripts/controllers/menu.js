@@ -6,16 +6,6 @@ app.controller('MenuCtrl', function ($scope, $routeParams, YoutubeService, $sce)
 	$scope.videos = YoutubeService.init;
 	$scope.channels = global.channels;
 
-	$scope.hideSubMenu = function(){
-		$("ul.hidden").slideUp();
-	}
-	$scope.toggleSubMenu = function(){
-		$("ul.hidden").slideToggle();
-	}
-	$scope.showSubMenu = function(){
-		$("ul.hidden").slideDown();
-	}
-
 
 	$scope.queryChannel = function(playlistId){
 		//clear exisitng video

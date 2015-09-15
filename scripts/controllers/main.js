@@ -9,8 +9,10 @@ app.controller('MainCtrl', function ($scope, YoutubeService, $location, $sce) {
 		if ($scope.videos.length > 0) {
 			$scope.videos.length = 0;			
 		};
+
+		console.log($scope.videos.length);
 		YoutubeService.queryVideo(query).then(function(data){
-			//console.log('data: ' + data.data.items);
+			//console.log('data: ');
 			$.each(data.data.items, function(index, item){
 				//$scope.videos.push
 				var object = {
@@ -28,8 +30,6 @@ app.controller('MainCtrl', function ($scope, YoutubeService, $location, $sce) {
 	$scope.setSelectedVideo = function(video){
 		YoutubeService.selectedVideo = video;
 	};
-
-
 
 
 	// $scope.getMovieById = function(videoId){

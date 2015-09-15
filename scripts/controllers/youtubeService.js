@@ -12,20 +12,18 @@ app.factory('YoutubeService', function($http, API_BASEURL, API_KEY){
 	var playlistItems = 'playlistItems';
 
 	var YoutubeService = {
-
 		queryVideo: function(query){
-			query = query || 'khmer songs';
+			query = query || 'khmer new songs';
 			var config = {
 					part: 'snippet',
 					q: query,
 					key: API_KEY,
-					maxResults: 12
+					maxResults: 4
 			};
-
 			return $http.get(API_BASEURL+search,
 				{
 					params: config,
-					paramSerializer: '$httpParamSerializerJQLike',
+					//paramSerializer: '$httpParamSerializerJQLike',
 					cache: true
 				});
 		},
@@ -45,7 +43,7 @@ app.factory('YoutubeService', function($http, API_BASEURL, API_KEY){
 		},
 
 		init: [],  //for array reference
-		selectedVideo: {},
+		selectedVideo: {}
 	}
 
 	return YoutubeService;

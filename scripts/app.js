@@ -63,9 +63,7 @@ var app = angular.module('khmerTubeApp', [
     controllerAs: 'main'
   })
   .when('/about', {
-    templateUrl: 'views/about.html',
-    controller: 'AboutCtrl',
-    controllerAs: 'about'
+    templateUrl: 'views/about.html'
   })
   .when('/channel/:channelId',{
     templateUrl: 'views/main.html',
@@ -79,14 +77,5 @@ var app = angular.module('khmerTubeApp', [
   })
   .otherwise({
     redirectTo: '/'
-  });
-});
-
-$(document).ready(function(){
-
-  $('.links').on("click", function(e)
-  {  
-    e.stopPropagation();
-    alert('working');
   });
 });

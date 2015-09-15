@@ -11,7 +11,7 @@
  	<header id="main_header" class="cf">
  		<div class="wrapper_wide">
  			<a id="logo" href="/#/">KhmerTube</a>
- 			<nav id="top" ng-controller="MainCtrl">
+ 			<nav id="top">
  				<form ng-submit="queryVideo(query)">
  					<input ng-model="query" type="text" placeholder="search videos">
  					<a ng-click="queryVideo(query)" class="btn btn_highlight">Search</a>
@@ -21,7 +21,7 @@
  	</header>
  	<div ng-include="'views/partials/navigation.html'"></div>
  	<div id="content">
- 		<div ng-view=""></div>	
+ 	<div class="ng-view="></div>	
  	</div>
 
  	<script src="scripts/libs/jquery/jquery.js"></script>
